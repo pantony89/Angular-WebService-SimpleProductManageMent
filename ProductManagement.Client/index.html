@@ -1,0 +1,53 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <title></title>
+    <title>Acme Product Management</title>
+    <meta charset="utf-8" />
+    <link href="Content/bootstrap.min.css" rel="stylesheet" />
+    <link href="css/app.css" rel="stylesheet" />
+    <script src="js/angular.min.js"></script>
+    <script src="Scripts/angular.js"></script>
+
+    <script src="app/app.js"></script>
+
+    <script src="app/products/productListCtrl.js"></script>
+</head>
+<body ng-app="productManagement">
+    <div class="panel panel-primary">
+        <div class="panel-heading"
+             style="font-size:large">
+            Product
+            List
+        </div>
+        <div class="panel-body">
+            <table class="table" ng-controller="productLisController as vm">
+                <thead>
+                    <tr>
+                        <td>
+                            <button type="button" class="btn btn-primary" ng-click="vm.toggleImage()">{{vm.showImage?"Hide ":"show "}}Image</button>
+                        </td>
+                        <td>Product</td>
+                        <td>Code</td>
+                        <td>Available</td>
+                        <td>Price</td>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr ng-repeat="product in vm.products">
+                        <td>
+                            <img ng-if="vm.showImage"
+                                 ng-src="{{product.imageUrl}}"
+                                 style="width:50px;margin:2px">
+                        </td>
+                        <td>{{product.productName}}</td>
+                        <td>{{ product.productCode }}</td>
+                        <td>{{ product.releaseDate }}</td>
+                        <td>{{ product.price | currency }}</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+</body>
+</html>
