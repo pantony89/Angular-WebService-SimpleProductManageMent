@@ -6,11 +6,18 @@
     <meta charset="utf-8" />
     <link href="Content/bootstrap.min.css" rel="stylesheet" />
     <link href="css/app.css" rel="stylesheet" />
-    <script src="js/angular.min.js"></script>
-    <script src="Scripts/angular.js"></script>
+
+    
+    <script src="js/angular.js"></script>
+    <script src="js/angular-mocks.js"></script>
+    <script src="js/angular-resource.js"></script>
+  
+ 
 
     <script src="app/app.js"></script>
 
+    <script src="common/services/common.services.js"></script>
+    <script src="common/services/productResourceMock.js"></script>
     <script src="app/products/productListCtrl.js"></script>
 </head>
 <body ng-app="productManagement">
@@ -21,7 +28,7 @@
             List
         </div>
         <div class="panel-body">
-            <table class="table" ng-controller="productLisController as vm">
+            <table class="table" ng-controller="ProductListCtrl as vm">
                 <thead>
                     <tr>
                         <td>

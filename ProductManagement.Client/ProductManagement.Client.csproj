@@ -94,12 +94,13 @@
     <Reference Include="System.EnterpriseServices" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="js\angular-mocks.js" />
+    <Content Include="js\angular-resource.js" />
+    <Content Include="js\angular.js" />
     <Content Include="packages.config" />
     <Content Include="ApplicationInsights.config">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
-    <Content Include="Scripts\angular.min.js.map" />
-    <Content Include="Scripts\jquery-1.9.1.min.map" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
@@ -110,15 +111,15 @@
   <ItemGroup>
     <Content Include="app\app.js" />
     <Content Include="app\products\productListCtrl.js" />
+    <Content Include="common\services\common.services.js" />
+    <Content Include="common\services\productResource.js" />
+    <Content Include="common\services\productResourceMock.js" />
     <Content Include="Content\bootstrap-theme.css" />
     <Content Include="Content\bootstrap-theme.min.css" />
     <Content Include="Content\bootstrap.css" />
     <Content Include="Content\bootstrap.min.css" />
     <Content Include="css\app.css" />
     <Content Include="index.html" />
-    <Content Include="js\angular.js" />
-    <Content Include="Scripts\angular.js" />
-    <Content Include="js\angular.min.js" />
     <Content Include="fonts\glyphicons-halflings-regular.woff2" />
     <Content Include="fonts\glyphicons-halflings-regular.woff" />
     <Content Include="fonts\glyphicons-halflings-regular.ttf" />
@@ -128,18 +129,12 @@
     <Content Include="Content\bootstrap.css.map" />
     <Content Include="Content\bootstrap-theme.min.css.map" />
     <Content Include="Content\bootstrap-theme.css.map" />
-    <None Include="Scripts\jquery-1.9.1.intellisense.js" />
-    <Content Include="Scripts\bootstrap.js" />
-    <Content Include="Scripts\bootstrap.min.js" />
-    <Content Include="Scripts\jquery-1.9.1.js" />
-    <Content Include="Scripts\jquery-1.9.1.min.js" />
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="common\" />
     <Folder Include="font\" />
     <Folder Include="image\" />
   </ItemGroup>
